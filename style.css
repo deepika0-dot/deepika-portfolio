@@ -1,0 +1,307 @@
+/* --- 1. GLOBAL STYLES & RESET --- */
+:root {
+    --color-primary: #8A2BE2; /* Lavender / BlueViolet */
+    --color-primary-dark: #6A1B9A; /* Darker Purple for hover */
+    --color-secondary: #E6E6FA; /* Light Lavender/Thistle for highlights */
+    --color-background-dark: #121212; /* Deep Black/Dark Grey */
+    --color-background-light: #FFFFFF; /* White/Light Grey */
+    --color-text-light: #F5F5F5; /* Off-White for dark backgrounds */
+    --color-text-dark: #333333; /* Dark Grey for light backgrounds */
+    --font-main: 'Poppins', sans-serif;
+    --spacing-large: 40px;
+    --spacing-medium: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-light);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.dark-section {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+}
+
+/* --- 2. TYPOGRAPHY --- */
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-medium);
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #AAAAAA; /* Light grey for contrast */
+    margin-bottom: var(--spacing-large);
+}
+
+/* --- 3. BUTTONS --- */
+.button {
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+.primary-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.secondary-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+/* --- 4. HEADER & NAVIGATION --- */
+header {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    margin-left: var(--spacing-medium);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--color-primary);
+}
+
+.cta-nav {
+    color: var(--color-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* --- 5. HERO SECTION --- */
+#hero {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    padding: 100px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-primary);
+}
+
+#hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-weight: 300;
+}
+
+/* --- 6. ABOUT SECTION --- */
+.about-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content p {
+    margin-bottom: var(--spacing-medium);
+    font-size: 1.1rem;
+    color: #D3D3D3; /* Lighter text for dark section */
+}
+
+/* --- 7. SERVICES SECTION --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-large);
+    margin-top: var(--spacing-large);
+}
+
+.service-card {
+    border: 1px solid #EEEEEE;
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.service-card h3 {
+    color: var(--color-primary-dark);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 8. PORTFOLIO SECTION --- */
+.filters {
+    margin-bottom: 30px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: #333;
+    color: var(--color-text-light);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.tag.active {
+    background-color: var(--color-primary);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-medium);
+    text-align: left;
+}
+
+.project-card {
+    background-color: var(--color-background-dark);
+    border: 1px solid #333;
+    padding: var(--spacing-medium);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    color: var(--color-primary);
+}
+
+.tag-label {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.project-button {
+    margin-top: 15px;
+    padding: 8px 20px;
+}
+
+/* --- 9. CONTACT SECTION --- */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    display: grid;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-main);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.social-links a {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+/* --- 10. FOOTER --- */
+footer {
+    background-color: #000000;
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* --- 11. RESPONSIVE DESIGN (Optional, but good practice) --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    .services-grid, .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+  }
